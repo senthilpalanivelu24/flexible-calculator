@@ -41,6 +41,41 @@ To use as a maven dependency use for any of the projects use. Please note that t
     <version>0.0.1</version>
   </dependency>
 ``
+## Operations
+
+``
+    Calculator calculator = new Calculator();
+    calculator.calculate(Operation.ADD, 1, 2); 
+        returns a BigInteger(2)
+    calculator.calculate(Operation.SUBTRACT, 1, 2);
+        returns a BigInteger(-1)
+    calculator.calculate(Operation.MULTIPLE, 1, 2);
+        returns a BigInteger(3)
+    calculator.calculate(Operation.ADD, 1, 1);
+        returns a BigInteger(1)
+    calculator.calculate(Operation.ADD, 1, 2);
+        returns a BigDecimal(0.5);
+
+   calculator.chainCalculate(ADD, 2)
+                .chainCalculate(SUBTRACT, 1)
+                .chainCalculate(MULTIPLY, 3);
+        would return BigInteger of value 12
+
+calculator.calculate(Operation.ADD, 1, 2.0); 
+        returns a BigDecimal(3.0)
+    calculator.calculate(Operation.SUBTRACT, 1, 2.0);
+        returns a BigDecimal(-1.0)
+    calculator.calculate(Operation.MULTIPLE, 1, 2.0);
+        returns a BigDecimal(2.0)
+    calculator.calculate(Operation.ADD, 1, 2.0);
+        returns a BigDecimal(0.5)
+
+   calculator.chainCalculate(ADD, 2)
+                .chainCalculate(SUBTRACT, 1)
+                .chainCalculate(MULTIPLY, 3);
+        would return BigInteger of value 12
+    
+``
 
 ## Scope for Improvements 
 
