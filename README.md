@@ -43,7 +43,7 @@ To use as a maven dependency use for any of the projects use. Please note that t
 ``
 ## Operations
 
-``
+```
     Calculator calculator = new Calculator();
     calculator.calculate(Operation.ADD, 1, 2); 
         returns a BigInteger(2)
@@ -75,7 +75,7 @@ calculator.calculate(Operation.ADD, 1, 2.0);
                 .chainCalculate(MULTIPLY, 3);
         would return BigInteger of value 12
     
-``
+```
 
 ## Scope for Improvements 
 
